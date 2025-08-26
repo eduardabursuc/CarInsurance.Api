@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="8.6.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.5">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="CarInsurance.Tests\obj\CarInsurance.Tests.csproj.nuget.dgspec.json" />
+    <_ContentIncludedByDefault Remove="CarInsurance.Tests\obj\project.assets.json" />
+    <_ContentIncludedByDefault Remove="CarInsurance.Tests\bin\Debug\net8.0\appsettings.json" />
+    <_ContentIncludedByDefault Remove="CarInsurance.Tests\bin\Debug\net8.0\CarInsurance.Api.deps.json" />
+    <_ContentIncludedByDefault Remove="CarInsurance.Tests\bin\Debug\net8.0\CarInsurance.Api.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="CarInsurance.Tests\bin\Debug\net8.0\CarInsurance.Api.staticwebassets.endpoints.json" />
+    <_ContentIncludedByDefault Remove="CarInsurance.Tests\bin\Debug\net8.0\CarInsurance.Tests.deps.json" />
+    <_ContentIncludedByDefault Remove="CarInsurance.Tests\bin\Debug\net8.0\CarInsurance.Tests.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="CarInsurance.Tests\bin\Debug\net8.0\CarInsurance.Tests\bin\Debug\net8.0\appsettings.json" />
+    <_ContentIncludedByDefault Remove="CarInsurance.Tests\bin\Debug\net8.0\CarInsurance.Tests\bin\Debug\net8.0\CarInsurance.Api.staticwebassets.endpoints.json" />
+    <_ContentIncludedByDefault Remove="CarInsurance.Tests\bin\Debug\net8.0\CarInsurance.Tests\bin\Debug\net8.0\CarInsurance.Tests.deps.json" />
+    <_ContentIncludedByDefault Remove="CarInsurance.Tests\bin\Debug\net8.0\CarInsurance.Tests\bin\Debug\net8.0\CarInsurance.Tests.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="CarInsurance.Tests\bin\Debug\net8.0\CarInsurance.Tests\bin\Debug\net8.0\CarInsurance.Tests\obj\CarInsurance.Tests.csproj.nuget.dgspec.json" />
+    <_ContentIncludedByDefault Remove="CarInsurance.Tests\bin\Debug\net8.0\CarInsurance.Tests\bin\Debug\net8.0\CarInsurance.Tests\obj\project.assets.json" />
+    <_ContentIncludedByDefault Remove="CarInsurance.Tests\bin\Debug\net8.0\CarInsurance.Tests\bin\Debug\net8.0\CarInsurance.Tests\obj\project.packagespec.json" />
+    <_ContentIncludedByDefault Remove="CarInsurance.Tests\bin\Debug\net8.0\CarInsurance.Tests\bin\Debug\net8.0\MvcTestingAppManifest.json" />
+    <_ContentIncludedByDefault Remove="CarInsurance.Tests\bin\Debug\net8.0\CarInsurance.Tests\obj\CarInsurance.Tests.csproj.nuget.dgspec.json" />
+    <_ContentIncludedByDefault Remove="CarInsurance.Tests\bin\Debug\net8.0\CarInsurance.Tests\obj\Debug\net8.0\CarInsurance.Tests.sourcelink.json" />
+    <_ContentIncludedByDefault Remove="CarInsurance.Tests\bin\Debug\net8.0\CarInsurance.Tests\obj\Debug\net8.0\MvcTestingAppManifest.json" />
+    <_ContentIncludedByDefault Remove="CarInsurance.Tests\bin\Debug\net8.0\CarInsurance.Tests\obj\project.assets.json" />
+    <_ContentIncludedByDefault Remove="CarInsurance.Tests\bin\Debug\net8.0\CarInsurance.Tests\obj\project.packagespec.json" />
+    <_ContentIncludedByDefault Remove="CarInsurance.Tests\bin\Debug\net8.0\MvcTestingAppManifest.json" />
+  </ItemGroup>
+</Project>

@@ -67,7 +67,7 @@ public class PolicyExpirationBackgroundServiceTests
         var service = new PolicyExpirationBackgroundService(logger, serviceScopeFactory);
 
         // Act
-        await service.CheckAndLogExpiredPoliciesAsync(db, testTime);
+        await service.CheckAndLogExpiredPoliciesAsync(testTime);
 
         // Assert
         Assert.Single(logger.LoggedMessages);
@@ -102,7 +102,7 @@ public class PolicyExpirationBackgroundServiceTests
         var service = new PolicyExpirationBackgroundService(logger, serviceScopeFactory);
 
         // Act
-        await service.CheckAndLogExpiredPoliciesAsync(db, testTime);
+        await service.CheckAndLogExpiredPoliciesAsync(testTime);
 
         // Assert
         Assert.Empty(logger.LoggedMessages);

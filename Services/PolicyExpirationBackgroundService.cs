@@ -10,12 +10,11 @@ public class PolicyExpirationBackgroundService(
 {
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        AppDbContext db = serviceScopeFactory.CreateScope().ServiceProvider.GetRequiredService<AppDbContext>();
         while (!stoppingToken.IsCancellationRequested)
         {
             try
             {
-                await CheckAndLogExpiredPoliciesAsync(db);
+                await CheckAndLogExpiredPoliciesAsync();
                 await Task.Delay(TimeSpan.FromHours(1), stoppingToken);
             }
             catch (Exception ex)
@@ -26,7 +25,7 @@ public class PolicyExpirationBackgroundService(
         }
     }
 
-    public async Task CheckAndLogExpiredPoliciesAsync(AppDbContext db, DateTime? now = null)
+    public async Task CheckAndLogExpiredPoliciesAsync(DateTime? now = null)
     {
         var currentTime = now ?? DateTime.UtcNow;
         
@@ -48,6 +47,6 @@ public class PolicyExpirationBackgroundService(
             policy.IsProcessed = true;
         }
 
-        await db.SaveChangesAsync();
+        await context.SaveChangesAsync();
     }
 }

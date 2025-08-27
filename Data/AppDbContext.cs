@@ -44,8 +44,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
                 .HasForeignKey(c => c.CarId)
                 .OnDelete(DeleteBehavior.Cascade);
         });
-
-        // EndDate intentionally left nullable for a later task
+        
     }
 }
 

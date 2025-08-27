@@ -34,12 +34,17 @@ public class PolicyExpirationBackgroundService(
 
         var policies = await context.Policies
             .Include(p => p.Car)
-            .Where(p => !p.IsProcessed &&
-                        p.EndDate.ToDateTime(TimeOnly.MinValue) <= currentTime &&
-                        p.EndDate.ToDateTime(TimeOnly.MinValue).AddHours(1) > currentTime)
+            .Where(p => !p.IsProcessed)
             .ToListAsync();
+     
+        var filtered = policies
+            .Where(p => {
+                var endDateTime = p.EndDate.ToDateTime(TimeOnly.MinValue);
+                return endDateTime <= currentTime && endDateTime.AddHours(1) > currentTime;
+            })
+            .ToList();
 
-        foreach (var policy in policies)
+        foreach (var policy in filtered)
         {
             logger.LogInformation("Policy expiration alert: PolicyId={PolicyId}, Car={CarModel}, Provider={Provider}",
                 policy.Id, policy.Car?.Model, policy.Provider);
